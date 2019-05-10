@@ -3,7 +3,7 @@ import './App.css';
 import Moment from 'react-moment';
 
 const swears = require("./data_curated.json");
-const token = "&access_token=e439735ef24afd3844c6add734f5af579ec8560f";
+const token = "&access_token=" + require('./config').api_key;
 const equals = require("array-equal");
 
 class App extends Component {
