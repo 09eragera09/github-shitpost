@@ -1,33 +1,185 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:700');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.commitList {
+    list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+.commitList > li {
+    padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+    background: url("./assets/download.png");
+    color: white;
+
+    font-family: 'Arvo', serif;
+}
+
+ul {
+    padding: 40px 300px;
+}
+
+.commitList > li {
+    border-top: 1px solid rgba(52, 52, 52, 1);
+    border-left: 1px solid rgba(52, 52, 52, 1);
+    border-right: 1px solid rgba(52, 52, 52, 1);
+    padding: 10px;
+}
+
+.commitList > li:last-child {
+    border-bottom: 1px solid rgba(52, 52, 52, 1);
+}
+
+.commitList li .message {
+    font-weight: 600;
+    max-width: 800px;
+}
+
+.commitList li .author {
+    font-size: .85em;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.commitList li .author > * {
+    padding: 0 3px;
+}
+
+.commitList li .author .commit-date {
+    padding: 0;
+}
+
+.commitList li .author .name {
+    font-weight: bold;
+}
+
+.commitList .links {
+    color: rgba(186, 186, 186, 1);
+    text-decoration: none;
+}
+
+.commitList .links:hover {
+    text-decoration: underline;
+}
+
+.commit-date {
+    color: rgba(142, 142, 142, 1);
+}
+
+.commit-parent {
+    justify-content: space-between;
+}
+
+.commit-btn-parent > * {
+    border: 1px solid rgba(56, 56, 56, 1);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.sha {
+    color: rgba(65, 131, 196, 1);
+    text-decoration: none;
+}
+
+.commit-btn-parent {
+    align-items: center;
+    font-family: "Roboto Mono", monospace;
+}
+
+.octicon > .arrowpath {
+    fill: rgba(65, 131, 196, 1);
+    margin: 5px;
+    padding: 10px;
+}
+
+.commit-btn-parent > *:hover, .btn-parent > span:hover {
+    background-color: rgba(65, 131, 196, 1);
+    color: white;
+}
+
+.commit-btn-parent a:hover path {
+    fill: white;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    text-align: center;
+    color: darkgray;
+    border-bottom: 2px solid darkgray;
+}
+
+header > * {
+    margin: 0;
+    padding: 10px;
+}
+
+.tags {
+    max-width: 1000px;
+    margin: 40px auto;
+    max-height: 300px;
+    overflow-y: auto;
+    display: grid;
+    grid-template: auto/1fr 1fr 1fr 1fr;
+    font-size: 1.15em;
+    text-align: center;
+}
+
+.tags span {
+    display: block;
+    width: 100%;
+}
+
+.tags span label {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+}
+
+.btn-parent {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.btn-parent > span {
+    margin: 0 20px;
+    padding: 10px;
+    color: gainsboro;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+}
+
+.btn-parent > span:hover {
+    border-color: rgba(65, 131, 196, 1);
+}
+
+.center {
+    text-align: center;
+}
+
+.loading {
+    padding: 130px;
+    font-size: 1.5em;
+}
+
+.tags span input {
+    display: none;
+}
+
+.checkBox-checked {
+    background-color: darkgray;
+    color: black;
 }
